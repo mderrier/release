@@ -1,0 +1,71 @@
+{
+  "name": "release",
+  "description": "release command",
+  "version": "0.0.2",
+  "author": {
+    "name": "mderrier @mderrier"
+  },
+  "bin": {
+    "release": "./bin/run"
+  },
+  "bugs": {
+    "url": "https://github.com/mderrier/release/issues"
+  },
+  "dependencies": {
+    "@oclif/command": "1.3.3",
+    "@oclif/config": "1.3.57",
+    "@oclif/errors": "1.0.2",
+    "@oclif/plugin-help": "1.1.5",
+    "conventional-changelog-angular": "1.6.5",
+    "conventional-changelog-cli": "1.3.14",
+    "conventional-recommended-bump": "2.0.5",
+    "execa": "0.9.0",
+    "fs-jetpack": "1.3.0",
+    "globby": "8.0.1",
+    "read-pkg-up": "3.0.0",
+    "semver": "5.5.0",
+    "standard-changelog": "1.0.13",
+    "write-pkg": "3.1.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "1.2.18",
+    "eslint": "4.18.1",
+    "eslint-config-oclif": "1.3.8"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    ".oclif.manifest.json",
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/mderrier/release",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "release",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mderrier/release.git"
+  },
+  "scripts": {
+    "clean": "rm -f .oclif.manifest.json",
+    "lint": "eslint .",
+    "postpublish": "yarn run clean",
+    "posttest": "yarn run lint",
+    "prepublishOnly": "oclif-dev manifest",
+    "preversion": "yarn run clean",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "readme": "ERROR: No README data found!"
+}
